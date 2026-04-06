@@ -1,0 +1,21 @@
+{
+  "name": "Maratón Cúcuta Metropolitana 2026",
+  "short_name": "MCM 2026",
+  "description": "La primera maratón internacional del Oriente Colombiano",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#050505",
+  "orientation": "portrait-primary",
+  "lang": "es",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "screenshots": [
+    { "src": "/screenshots/mobile.jpg", "sizes": "390x844", "type": "image/jpeg", "form_factor": "narrow" },
+    { "src": "/screenshots/desktop.jpg", "sizes": "1280x800", "type": "image/jpeg", "form_factor": "wide" }
+  ],
+  "categories": ["sports", "lifestyle"],
+  "prefer_related_applications": false
+}
