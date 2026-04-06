@@ -10,13 +10,20 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 document.documentElement.classList.replace('no-js', 'js');
 
 /* ── Topbar: pin on scroll ─────────────────────────────── */
-const topbar = document.getElementById('topbar');
-let lastScroll = 0;
+const topbar    = document.getElementById('topbar');
+const bottomNav = document.getElementById('bottomNav');
 
 const onScroll = () => {
-  const y = window.scrollY;
-  topbar.classList.toggle('pinned', y > 10);
-  lastScroll = y;
+  const y     = window.scrollY;
+  const atTop = y <= 10;
+
+  // Topbar: muestra fondo al bajar
+  topbar.classList.toggle('pinned', !atTop);
+
+  // Bottom nav: aparece al bajar, desaparece solo al volver al tope
+  if (bottomNav) {
+    bottomNav.classList.toggle('is-visible', !atTop);
+  }
 };
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll(); // run on load
